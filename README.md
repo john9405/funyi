@@ -5,16 +5,16 @@ iOS国际化语言包翻译
 
 安装依赖
 ```
-pip install pyqt5
-pip install requests
+pip3 install pyqt5
+pip3 install requests
 ```
 运行
 ```
-python main.py
+python3 main.py
 ```
 
 编译成可执行应用程序
 ```
-pip install pyinstaller
-pyinstaller main.py -w
+pip3 install pyinstaller
+python3 -m pyinstaller main.py -w
 ```
