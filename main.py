@@ -184,6 +184,10 @@ class TranslatorApp(QWidget):
             appid = ui.AppId.text()
             appkey = ui.AppKey.text()
             choices = json.loads(ui.Language.toPlainText())
+            self.src_lang_combo.clear()
+            self.src_lang_combo.addItems(["自动检测"] + list(choices.keys()))
+            self.dest_lang_combo.clear()
+            self.dest_lang_combo.addItems(list(choices.keys()))
             with open(os.path.join(os.path.expanduser("~"), "baidu.txt"), 'w', encoding='utf-8') as f:
                 f.write(json.dumps({"appid": appid, "appkey": appkey, "language": choices}))
 
